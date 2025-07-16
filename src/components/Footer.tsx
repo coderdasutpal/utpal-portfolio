@@ -51,26 +51,37 @@ const Footer = () => {
       <div className="container-custom">
         {/* Main Footer Content */}
         <div className="py-16 grid md:grid-cols-3 gap-12">
-          {/* Brand Section */}
-          <div>
-            <h3 className="text-2xl font-bold mb-4">Portfolio</h3>
-            <p className="text-background/80 mb-6 leading-relaxed">
-              Building digital experiences that make a difference. 
-              Let's create something amazing together.
-            </p>
+        {/* Brand Section */}
+        <div>
+          <h3 className="text-2xl font-bold mb-4">Utpal Das</h3>
+          <p className="text-background/80 mb-6 leading-relaxed">
+            Tech strategist building digital ecosystems and future-focused products. 
+            Let's create something meaningful together.
+          </p>
             <div className="flex space-x-4">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="w-10 h-10 bg-background/10 hover:bg-background/20 rounded-lg flex items-center justify-center transition-colors duration-200"
-                  aria-label={link.label}
-                >
-                  {link.icon}
-                </a>
-              ))}
+            {[
+              {
+                icon: <Linkedin className="h-5 w-5" />,
+                href: 'https://www.linkedin.com/in/iamdasutpal',
+                label: 'LinkedIn'
+              },
+              {
+                icon: <Mail className="h-5 w-5" />,
+                href: 'mailto:utpal.inbox@hotmail.com',
+                label: 'Email'
+              }
+            ].map((link, index) => (
+              <a
+                key={index}
+                href={link.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-background/10 hover:bg-background/20 rounded-lg flex items-center justify-center transition-colors duration-200"
+                aria-label={link.label}
+              >
+                {link.icon}
+              </a>
+            ))}
             </div>
           </div>
 
@@ -98,16 +109,18 @@ const Footer = () => {
                 Ready to start your next project?
               </p>
               <a
-                href="mailto:hello@developer.com"
+                href="mailto:utpal.inbox@hotmail.com"
                 className="block text-background hover:text-background/80 transition-colors duration-200 font-medium"
               >
-                hello@developer.com
+                utpal.inbox@hotmail.com
               </a>
               <a
-                href="tel:+15551234567"
+                href="https://www.linkedin.com/in/iamdasutpal"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block text-background/80 hover:text-background transition-colors duration-200"
               >
-                +1 (555) 123-4567
+                LinkedIn Profile
               </a>
             </div>
           </div>
@@ -116,7 +129,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-background/20 py-8 flex flex-col md:flex-row items-center justify-between">
           <p className="text-background/60 text-sm mb-4 md:mb-0">
-            © {currentYear} Portfolio. All rights reserved.
+            © {currentYear} Utpal Das. All rights reserved.
           </p>
           
           <div className="flex items-center space-x-6 text-sm">

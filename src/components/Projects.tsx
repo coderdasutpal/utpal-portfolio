@@ -1,124 +1,146 @@
 import React from 'react';
 import { ExternalLink, Github } from 'lucide-react';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution built with React, Node.js, and PostgreSQL. Features include user authentication, payment processing, and admin dashboard.',
-      tags: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      github: '#',
-      live: '#'
+      title: "AutoScout24 Mobile Apps",
+      period: "2022–2024",
+      tech: "iOS, Android, Firebase",
+      description: "Led mobile product growth and engagement across Europe."
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      tags: ['TypeScript', 'React', 'Socket.io', 'MongoDB'],
-      image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop',
-      github: '#',
-      live: '#'
+      title: "Vehicle Data APIs – AutoScout24",
+      period: "2022–2024",
+      tech: "GraphQL, APIs",
+      description: "Built monetizable diagnostics APIs and data integrations for partners."
     },
     {
-      title: 'Analytics Dashboard',
-      description: 'A comprehensive analytics dashboard for businesses to track KPIs, generate reports, and visualize data with interactive charts.',
-      tags: ['Vue.js', 'Python', 'Django', 'Chart.js'],
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      github: '#',
-      live: '#'
+      title: "Asset Financing System – Cazoo",
+      period: "2021–2022",
+      tech: "Salesforce, APIs",
+      description: "Built post-acquisition financing workflows for vehicle asset management."
     },
     {
-      title: 'Mobile Banking App',
-      description: 'A secure mobile banking application with biometric authentication, transaction history, and budget tracking features.',
-      tags: ['React Native', 'Firebase', 'Redux', 'Expo'],
-      image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop',
-      github: '#',
-      live: '#'
+      title: "Digital Handover App – Cluno",
+      period: "2019–2022",
+      tech: "React Native, Figma",
+      description: "Digitized customer car delivery with 90% paper reduction."
     },
     {
-      title: 'AI Content Generator',
-      description: 'An AI-powered content generation platform that helps marketers create engaging copy, blog posts, and social media content.',
-      tags: ['Next.js', 'OpenAI API', 'Tailwind', 'Supabase'],
-      image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop',
-      github: '#',
-      live: '#'
+      title: "Partner Platform Ecosystem – Cluno",
+      period: "2019–2022",
+      tech: "CRM, Dealer Tools",
+      description: "Designed B2B leasing and dealership ecosystem from scratch."
     },
     {
-      title: 'Learning Platform',
-      description: 'An online learning platform with video streaming, progress tracking, quizzes, and certification system for educational institutions.',
-      tags: ['React', 'AWS', 'GraphQL', 'DynamoDB'],
-      image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=600&h=400&fit=crop',
-      github: '#',
-      live: '#'
+      title: "Mid-Mile Planning – Cazoo",
+      period: "2021",
+      tech: "Logistics, Routing",
+      description: "Optimized vehicle delivery routing system."
+    },
+    {
+      title: "Glide Intake App – Cazoo",
+      period: "2021",
+      tech: "VIN Scanning, Mobile UI",
+      description: "App for vehicle intake via scanning & check-in."
+    },
+    {
+      title: "OCR Fine Handling – Cluno",
+      period: "2020",
+      tech: "OCR, Dashboards",
+      description: "Optimized fine processing from analog to digital."
+    },
+    {
+      title: "Apollo CAD Projection – Merz Group",
+      period: "2017–2018",
+      tech: "QT, AR, Vision",
+      description: "Built AR-CAD projection system for automotive assembly lines."
+    },
+    {
+      title: "Merz CAD Workmate",
+      period: "2017",
+      tech: "Cross-platform, AR/VR",
+      description: "CAD viewer + manipulation tool for design teams and engineers."
+    },
+    {
+      title: "Optical Measurement Cell – Merz Group",
+      period: "2016–2017",
+      tech: "Industrial Sensors, PLC",
+      description: "Deployed robotics + vision cell for automated quality inspection."
+    },
+    {
+      title: "CAD Reverse Engineering – Zeiss",
+      period: "2011–2016",
+      tech: "ACIS, C++, C#, WPF",
+      description: "Developed point cloud to CAD conversion tools for precision engineering."
+    },
+    {
+      title: "NSK Sensor Firmware – NEGELE",
+      period: "2010–2011",
+      tech: "Embedded C",
+      description: "Firmware for food/pharma grade sensor hardware."
+    },
+    {
+      title: "EICAS – National Aerospace Labs",
+      period: "2009–2010",
+      tech: "Avionics GUI",
+      description: "Built Engine Indication and Crew Alert System (pilot display)."
+    },
+    {
+      title: "SFD Assembly Code Validation – Meggitt",
+      period: "2008–2009",
+      tech: "Assembly, DSP",
+      description: "Manual verification of low-level avionics display firmware."
+    },
+    {
+      title: "DC Power Booster",
+      period: "2007–2008",
+      tech: "Hardware",
+      description: "Converted low voltage to high voltage using DC chopper circuit."
+    },
+    {
+      title: "Infrared Counter",
+      period: "2005",
+      tech: "Embedded",
+      description: "Designed IR sensor system to count trespasses."
     }
   ];
 
   return (
-    <section id="projects" className="section-padding">
+    <section id="projects" className="section-padding bg-gradient-to-b from-background to-secondary">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-            Featured Projects
+            Projects
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A showcase of my recent work, demonstrating expertise in full-stack 
-            development and modern web technologies.
+            A selection of products and systems I've built across automotive, aerospace, and industrial domains.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="group hover-lift border-border shadow-medium hover:shadow-large">
-              <div className="relative overflow-hidden rounded-t-lg">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover transition-transform duration-300 group-hover:scale-110"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-foreground/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              
+            <Card key={index} className="hover-lift border-border shadow-medium hover:shadow-large transition-all duration-300">
               <CardContent className="p-6">
-                <h3 className="text-xl font-semibold mb-3 text-foreground">
-                  {project.title}
-                </h3>
+                <div className="mb-4">
+                  <h3 className="text-xl font-semibold text-foreground mb-2 line-clamp-2">
+                    {project.title}
+                  </h3>
+                  <div className="flex flex-col gap-2 mb-3">
+                    <span className="text-sm text-primary font-medium">
+                      {project.period}
+                    </span>
+                    <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded-md w-fit">
+                      {project.tech}
+                    </span>
+                  </div>
+                </div>
                 
-                <p className="text-muted-foreground mb-4 leading-relaxed">
+                <p className="text-muted-foreground leading-relaxed mb-6">
                   {project.description}
                 </p>
-                
-                <div className="flex flex-wrap gap-2 mb-6">
-                  {project.tags.map((tag, tagIndex) => (
-                    <span
-                      key={tagIndex}
-                      className="px-3 py-1 bg-secondary text-secondary-foreground text-sm rounded-full"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-                
-                <div className="flex gap-3">
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="flex-1"
-                    onClick={() => window.open(project.github, '_blank')}
-                  >
-                    <Github className="w-4 h-4 mr-2" />
-                    Code
-                  </Button>
-                  <Button
-                    size="sm"
-                    className="flex-1"
-                    onClick={() => window.open(project.live, '_blank')}
-                  >
-                    <ExternalLink className="w-4 h-4 mr-2" />
-                    Live Demo
-                  </Button>
-                </div>
               </CardContent>
             </Card>
           ))}

@@ -36,15 +36,18 @@ const Hero = () => {
       <div className="container-custom z-10 text-center text-white">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Building Digital
+            Hi, I'm
             <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Experiences
+              Utpal Das
             </span>
           </h1>
           
-          <p className="text-xl md:text-2xl mb-8 text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in">
-            Full-stack developer passionate about creating beautiful, functional,
-            and user-centered digital solutions.
+          <p className="text-xl md:text-2xl mb-4 text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in font-medium">
+            Tech strategist, builder, father.
+          </p>
+          
+          <p className="text-lg md:text-xl mb-8 text-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in">
+            I lead digital ecosystems, launch future-focused products, and build systems that scale — from autonomous mobility to grassroots education.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
@@ -53,7 +56,7 @@ const Hero = () => {
               size="lg"
               className="bg-white text-primary hover:bg-white/90 px-8 py-3 text-lg font-medium shadow-premium"
             >
-              View My Work
+              See My Work
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
             
@@ -63,7 +66,7 @@ const Hero = () => {
               size="lg"
               className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg font-medium backdrop-blur-sm"
             >
-              Download Resume
+              Contact Me
               <Download className="ml-2 h-5 w-5" />
             </Button>
           </div>

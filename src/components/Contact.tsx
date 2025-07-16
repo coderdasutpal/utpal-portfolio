@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Linkedin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
@@ -42,19 +42,13 @@ const Contact = () => {
     {
       icon: <Mail className="h-6 w-6" />,
       title: 'Email',
-      value: 'hello@developer.com',
-      link: 'mailto:hello@developer.com'
-    },
-    {
-      icon: <Phone className="h-6 w-6" />,
-      title: 'Phone',
-      value: '+1 (555) 123-4567',
-      link: 'tel:+15551234567'
+      value: 'utpal.inbox@hotmail.com',
+      link: 'mailto:utpal.inbox@hotmail.com'
     },
     {
       icon: <MapPin className="h-6 w-6" />,
       title: 'Location',
-      value: 'San Francisco, CA',
+      value: 'Berlin, Germany',
       link: '#'
     }
   ];
@@ -67,8 +61,7 @@ const Contact = () => {
             Let's Work Together
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind? I'd love to hear about it. 
-            Send me a message and let's start building something amazing.
+            Ready to discuss your next project? Let's connect and explore opportunities to work together.
           </p>
         </div>
 
@@ -179,21 +172,31 @@ const Contact = () => {
               ))}
             </div>
 
-            {/* Availability */}
-            <div className="bg-gradient-to-r from-primary to-accent p-6 rounded-xl text-white shadow-premium">
-              <h4 className="font-semibold mb-2">Currently Available</h4>
-              <p className="text-white/90 text-sm">
-                I'm open to new freelance projects and full-time opportunities. 
-                Let's discuss how we can work together.
-              </p>
+            {/* Social Links */}
+            <div className="flex justify-center space-x-6 mb-8">
+              {[
+                { icon: <Linkedin className="h-6 w-6" />, href: 'https://www.linkedin.com/in/iamdasutpal', label: 'LinkedIn' },
+                { icon: <Mail className="h-6 w-6" />, href: 'mailto:utpal.inbox@hotmail.com', label: 'Email' }
+              ].map((social, index) => (
+                <a
+                  key={index}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-12 h-12 bg-muted hover:bg-primary hover:text-primary-foreground rounded-lg flex items-center justify-center transition-all duration-200 shadow-medium hover:shadow-large hover:scale-105"
+                  aria-label={social.label}
+                >
+                  {social.icon}
+                </a>
+              ))}
             </div>
 
-            {/* Response Time */}
-            <div className="bg-muted p-6 rounded-xl">
-              <h4 className="font-semibold text-foreground mb-2">Quick Response</h4>
-              <p className="text-muted-foreground text-sm">
-                I typically respond to all inquiries within 24 hours. 
-                For urgent matters, feel free to call directly.
+            {/* Availability */}
+            <div className="bg-gradient-to-r from-primary to-accent p-6 rounded-xl text-white shadow-premium">
+              <h4 className="font-semibold mb-2">Open to Opportunities</h4>
+              <p className="text-white/90 text-sm">
+                I'm interested in product leadership roles and strategic consulting projects. 
+                Let's explore how we can create impact together.
               </p>
             </div>
           </div>

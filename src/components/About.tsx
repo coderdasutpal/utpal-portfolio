@@ -40,17 +40,8 @@ const About = () => {
               About Me
             </h2>
             
-            <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-              I'm a passionate full-stack developer with over 5 years of experience 
-              creating digital solutions that make a difference. I specialize in 
-              building scalable web applications using modern technologies.
-            </p>
-            
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              When I'm not coding, you'll find me contributing to open-source projects, 
-              mentoring aspiring developers, or exploring the latest trends in technology. 
-              I believe in writing clean, maintainable code and creating user experiences 
-              that delight.
+              I'm a Berlin-based product leader with 18+ years across software, hardware, and cloud systems. I head Digital Solutions at Cubonic, building platforms for electric and autonomous vehicles. I've driven product growth at AutoScout24, Cazoo, Cluno, Zeiss IMT, and Merz Group. I founded a school in Assam and am raising my son, Vyom, in a multilingual home.
             </p>
 
             {/* Skills */}

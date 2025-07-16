@@ -5,36 +5,28 @@ import { Card, CardContent } from '@/components/ui/card';
 const Volunteering = () => {
   const volunteerWork = [
     {
-      organization: 'Code for Good',
-      role: 'Lead Developer',
-      description: 'Built a food bank management system that helps distribute meals to 500+ families weekly. Developed user-friendly interface for volunteers and automated inventory tracking.',
-      icon: <Code className="h-8 w-8" />,
-      period: '2022 - Present',
-      impact: '500+ families served weekly'
-    },
-    {
-      organization: 'Tech Education Alliance',
-      role: 'Mentor & Instructor',
-      description: 'Mentor underrepresented students in programming. Designed curriculum for web development bootcamp that achieved 85% job placement rate.',
-      icon: <BookOpen className="h-8 w-8" />,
-      period: '2021 - Present',
-      impact: '150+ students mentored'
-    },
-    {
-      organization: 'Local Animal Shelter',
-      role: 'Digital Coordinator',
-      description: 'Created an adoption platform that increased pet adoptions by 40%. Built volunteer scheduling system and donation tracking dashboard.',
+      organization: 'Greenpeace India',
+      role: 'Volunteer',
+      description: 'Supporting environmental campaigns and awareness initiatives across India.',
       icon: <Heart className="h-8 w-8" />,
-      period: '2020 - 2022',
-      impact: '40% increase in adoptions'
+      period: '2009 - Present',
+      impact: 'Environmental advocacy'
     },
     {
-      organization: 'Youth Coding Club',
-      role: 'Volunteer Instructor',
-      description: 'Teach coding fundamentals to middle school students. Focus on building confidence in STEM and encouraging creativity through programming.',
+      organization: 'Greenpeace International',
+      role: 'Member',
+      description: 'Global climate advocacy and eco-action initiatives for sustainable future.',
       icon: <Users className="h-8 w-8" />,
-      period: '2019 - Present',
-      impact: '200+ young minds inspired'
+      period: '2009 - Present',
+      impact: 'Climate action'
+    },
+    {
+      organization: 'WWF',
+      role: 'Volunteer',
+      description: 'Wildlife protection and animal welfare support for endangered species.',
+      icon: <Heart className="h-8 w-8" />,
+      period: 'Ongoing',
+      impact: 'Wildlife conservation'
     }
   ];
 
