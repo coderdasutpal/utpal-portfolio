@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     alert('Form submitted (placeholder)');
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  console.log('Portfolio site loaded.');
+});
