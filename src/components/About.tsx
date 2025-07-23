@@ -1,6 +1,6 @@
 import React from 'react';
 import { Code, Coffee, Heart } from 'lucide-react';
-import profileImage from '@/assets/profile-image.jpg';
+import profileImage from '@/assets/profile-image-new.jpg';
 
 const About = () => {
   const skills = [
