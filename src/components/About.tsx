@@ -4,29 +4,29 @@ const profileImage = '/lovable-uploads/7ac51a14-e38e-4985-abe7-d0d7b62f5fcb.png'
 
 const About = () => {
   const skills = [
-    'React & TypeScript',
-    'Node.js & Express',
-    'Python & Django',
-    'PostgreSQL & MongoDB',
-    'AWS & Docker',
-    'GraphQL & REST APIs'
+    'Product Leadership & GTM',
+    'Operations Strategy',
+    'Agile Methodologies',
+    'Analytics & Data-Driven Decisions',
+    'Stakeholder Management',
+    'Software Development'
   ];
 
   const highlights = [
     {
       icon: <Code className="h-6 w-6" />,
-      title: '5+ Years',
-      description: 'Full-stack development experience'
+      title: '18+ Years',
+      description: 'Product management experience'
     },
     {
       icon: <Coffee className="h-6 w-6" />,
-      title: '50+ Projects',
-      description: 'Successfully delivered'
+      title: '5 Companies',
+      description: 'Digital transformation led'
     },
     {
       icon: <Heart className="h-6 w-6" />,
-      title: '100%',
-      description: 'Client satisfaction rate'
+      title: 'Multi-lingual',
+      description: 'English, German, Hindi, Japanese'
     }
   ];
 
@@ -41,7 +41,7 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              I'm a Berlin-based product leader with 18+ years across software, hardware, and cloud systems. I head Digital Solutions at Cubonic, building platforms for electric and autonomous vehicles. I've driven product growth at AutoScout24, Cazoo, Cluno, Zeiss IMT, and Merz Group. I founded a school in Assam and am raising my son, Vyom, in a multilingual home.
+              Passionate leader with over 18+ years of rich experience in product management, operations, software engineering and new product introduction. Currently Head of Digital at Cubonic, building platforms for electric and autonomous vehicles. Proven track record at AutoScout24, Cazoo/Cluno, Zeiss IMT, and Merz Group, driving growth, innovation, and digital transformation across diverse industries.
             </p>
 
             {/* Skills */}
