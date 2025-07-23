@@ -8,103 +8,120 @@ const Projects = () => {
       title: "AutoScout24 Mobile Apps",
       period: "2022–2024",
       tech: "iOS, Android, Firebase",
-      description: "Led mobile product growth and engagement across Europe."
+      description: "Led mobile product growth and engagement across Europe.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Vehicle Data APIs – AutoScout24",
       period: "2022–2024",
       tech: "GraphQL, APIs",
-      description: "Built monetizable diagnostics APIs and data integrations for partners."
+      description: "Built monetizable diagnostics APIs and data integrations for partners.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Asset Financing System – Cazoo",
       period: "2021–2022",
       tech: "Salesforce, APIs",
-      description: "Built post-acquisition financing workflows for vehicle asset management."
+      description: "Built post-acquisition financing workflows for vehicle asset management.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Digital Handover App – Cluno",
       period: "2019–2022",
       tech: "React Native, Figma",
-      description: "Digitized customer car delivery with 90% paper reduction."
+      description: "Digitized customer car delivery with 90% paper reduction.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Partner Platform Ecosystem – Cluno",
       period: "2019–2022",
       tech: "CRM, Dealer Tools",
-      description: "Designed B2B leasing and dealership ecosystem from scratch."
+      description: "Designed B2B leasing and dealership ecosystem from scratch.",
+      image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Mid-Mile Planning – Cazoo",
       period: "2021",
       tech: "Logistics, Routing",
-      description: "Optimized vehicle delivery routing system."
+      description: "Optimized vehicle delivery routing system.",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Glide Intake App – Cazoo",
       period: "2021",
       tech: "VIN Scanning, Mobile UI",
-      description: "App for vehicle intake via scanning & check-in."
+      description: "App for vehicle intake via scanning & check-in.",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "OCR Fine Handling – Cluno",
       period: "2020",
       tech: "OCR, Dashboards",
-      description: "Optimized fine processing from analog to digital."
+      description: "Optimized fine processing from analog to digital.",
+      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Apollo CAD Projection – Merz Group",
       period: "2017–2018",
       tech: "QT, AR, Vision",
-      description: "Built AR-CAD projection system for automotive assembly lines."
+      description: "Built AR-CAD projection system for automotive assembly lines.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Merz CAD Workmate",
       period: "2017",
       tech: "Cross-platform, AR/VR",
-      description: "CAD viewer + manipulation tool for design teams and engineers."
+      description: "CAD viewer + manipulation tool for design teams and engineers.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Optical Measurement Cell – Merz Group",
       period: "2016–2017",
       tech: "Industrial Sensors, PLC",
-      description: "Deployed robotics + vision cell for automated quality inspection."
+      description: "Deployed robotics + vision cell for automated quality inspection.",
+      image: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "CAD Reverse Engineering – Zeiss",
       period: "2011–2016",
       tech: "ACIS, C++, C#, WPF",
-      description: "Developed point cloud to CAD conversion tools for precision engineering."
+      description: "Developed point cloud to CAD conversion tools for precision engineering.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "NSK Sensor Firmware – NEGELE",
       period: "2010–2011",
       tech: "Embedded C",
-      description: "Firmware for food/pharma grade sensor hardware."
+      description: "Firmware for food/pharma grade sensor hardware.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "EICAS – National Aerospace Labs",
       period: "2009–2010",
       tech: "Avionics GUI",
-      description: "Built Engine Indication and Crew Alert System (pilot display)."
+      description: "Built Engine Indication and Crew Alert System (pilot display).",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "SFD Assembly Code Validation – Meggitt",
       period: "2008–2009",
       tech: "Assembly, DSP",
-      description: "Manual verification of low-level avionics display firmware."
+      description: "Manual verification of low-level avionics display firmware.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "DC Power Booster",
       period: "2007–2008",
       tech: "Hardware",
-      description: "Converted low voltage to high voltage using DC chopper circuit."
+      description: "Converted low voltage to high voltage using DC chopper circuit.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
     },
     {
       title: "Infrared Counter",
       period: "2005",
       tech: "Embedded",
-      description: "Designed IR sensor system to count trespasses."
+      description: "Designed IR sensor system to count trespasses.",
+      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80"
     }
   ];
 
@@ -122,7 +139,14 @@ const Projects = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="hover-lift border-border shadow-medium hover:shadow-large transition-all duration-300">
+            <Card key={index} className="hover-lift border-border shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden">
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                />
+              </div>
               <CardContent className="p-6">
                 <div className="mb-4">
                   <h3 className="text-xl font-semibold text-foreground mb-2 line-clamp-2">
