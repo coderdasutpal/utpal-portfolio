@@ -41,13 +41,13 @@ const About = () => {
             </h2>
             
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Passionate leader with over 18+ years of rich experience in product management, operations, software engineering and new product introduction. Currently Head of Digital at Cubonic, building platforms for electric and autonomous vehicles. Proven track record at AutoScout24, Cazoo/Cluno, Zeiss IMT, and Merz Group, driving growth, innovation, and digital transformation across diverse industries.
+              Passionate leader with over 18+ years of rich experience across diverse organizational landscapes - from large corporations like Zeiss and Tata Consultancy Services, to high-growth startups like Cluno and Cazoo, strategic mobility startups like Cubonic GmbH, and mid-size tech companies like AutoScout24. Currently Head of Digital at Cubonic, pioneering autonomous vehicle technologies and electric mobility solutions.
             </p>
 
             {/* Skills */}
             <div className="mb-8">
               <h3 className="text-xl font-semibold mb-4 text-foreground">
-                Technologies I work with
+                Core Competencies
               </h3>
               <div className="grid grid-cols-2 gap-3">
                 {skills.map((skill, index) => (
