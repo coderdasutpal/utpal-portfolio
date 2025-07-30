@@ -126,43 +126,51 @@ const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="section-padding bg-gradient-to-b from-background to-secondary">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+    <section id="projects" className="section-padding bg-gradient-subtle relative overflow-hidden">
+      {/* Background elements */}
+      <div className="absolute top-20 right-20 w-40 h-40 bg-accent/10 rounded-full blur-3xl animate-float"></div>
+      <div className="absolute bottom-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }}></div>
+      
+      <div className="container-custom relative">
+        <div className="text-center mb-20 animate-fade-in-scale">
+          <h2 className="text-5xl md:text-6xl font-black text-gradient bg-gradient-to-r from-primary via-accent to-tertiary bg-clip-text mb-8">
             Projects
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of products and systems I've built across automotive, aerospace, and industrial domains.
-          </p>
+          <div className="card-modern p-8 rounded-3xl max-w-4xl mx-auto">
+            <p className="text-xl text-foreground/90 leading-relaxed font-medium">
+              A selection of products and systems I've built across automotive, aerospace, and industrial domains.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="hover-lift border-border shadow-medium hover:shadow-large transition-all duration-300 overflow-hidden">
-              <div className="aspect-video overflow-hidden">
+            <Card key={index} className="card-modern hover-lift border-0 overflow-hidden group animate-fade-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <div className="aspect-video overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
               <CardContent className="p-6">
                 <div className="mb-4">
-                  <h3 className="text-xl font-semibold text-foreground mb-2 line-clamp-2">
+                  <h3 className="text-xl font-bold text-foreground mb-3 line-clamp-2 group-hover:text-primary transition-colors">
                     {project.title}
                   </h3>
-                  <div className="flex flex-col gap-2 mb-3">
-                    <span className="text-sm text-primary font-medium">
+                  <div className="flex flex-col gap-3 mb-4">
+                    <span className="text-sm text-primary font-bold bg-primary/10 px-3 py-1 rounded-full w-fit">
                       {project.period}
                     </span>
-                    <span className="text-sm text-muted-foreground bg-muted px-2 py-1 rounded-md w-fit">
+                    <span className="text-sm text-muted-foreground glass backdrop-blur-xl px-3 py-1 rounded-full w-fit border border-primary/20">
                       {project.tech}
                     </span>
                   </div>
                 </div>
                 
-                <p className="text-muted-foreground leading-relaxed mb-6">
+                <p className="text-muted-foreground leading-relaxed">
                   {project.description}
                 </p>
               </CardContent>

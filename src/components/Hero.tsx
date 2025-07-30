@@ -19,8 +19,8 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
-      {/* Background Image */}
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-mesh spotlight">
+      {/* Animated Background */}
       <div
         className="absolute inset-0 z-0"
         style={{
@@ -29,42 +29,53 @@ const Hero = () => {
           backgroundPosition: 'center',
         }}
       >
-        <div className="absolute inset-0 hero-gradient opacity-90"></div>
+        <div className="absolute inset-0 hero-gradient opacity-95"></div>
       </div>
 
-      {/* Content */}
-      <div className="container-custom z-10 text-center text-white">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-fade-in">
-            Hi, I'm
-            <span className="block bg-gradient-to-r from-white to-white/80 bg-clip-text text-transparent">
-              Utpal Das
-            </span>
-          </h1>
-          
-          <p className="text-xl md:text-2xl mb-4 text-white/90 max-w-2xl mx-auto leading-relaxed animate-fade-in font-medium">
-            Tech strategist, builder, father.
-          </p>
-          
-          <p className="text-lg md:text-xl mb-8 text-white/80 max-w-3xl mx-auto leading-relaxed animate-fade-in">
-            I lead digital ecosystems, launch future-focused products, and build systems that scale — from autonomous mobility to grassroots education.
-          </p>
+      {/* Floating orbs */}
+      <div className="absolute top-20 left-20 w-32 h-32 bg-primary/20 rounded-full blur-xl animate-float"></div>
+      <div className="absolute bottom-20 right-20 w-24 h-24 bg-accent/20 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
+      <div className="absolute top-1/2 right-32 w-16 h-16 bg-tertiary/20 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-fade-in">
+      {/* Content */}
+      <div className="container-custom z-10 text-center text-white relative">
+        <div className="max-w-5xl mx-auto">
+          <div className="mb-8 animate-scale-in">
+            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight">
+              Hi, I'm
+              <span className="block text-gradient animate-gradient-shift text-transparent bg-clip-text bg-gradient-to-r from-white via-primary-glow to-accent-glow bg-size-200">
+                Utpal Das
+              </span>
+            </h1>
+          </div>
+          
+          <div className="glass backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-12 animate-fade-in-scale">
+            <p className="text-2xl md:text-3xl mb-6 text-white/95 max-w-3xl mx-auto leading-relaxed font-semibold">
+              Tech strategist, builder, father.
+            </p>
+            
+            <p className="text-lg md:text-xl text-white/85 max-w-4xl mx-auto leading-relaxed">
+              I lead digital ecosystems, launch future-focused products, and build systems that scale — from autonomous mobility to grassroots education.
+            </p>
+          </div>
+
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
             <Button
               onClick={scrollToProjects}
               size="lg"
-              className="bg-white text-primary hover:bg-white/90 px-8 py-3 text-lg font-medium shadow-premium"
+              className="btn-primary group relative overflow-hidden"
             >
-              See My Work
-              <ArrowRight className="ml-2 h-5 w-5" />
+              <span className="relative z-10 flex items-center">
+                See My Work
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </span>
             </Button>
             
             <Button
               onClick={scrollToContact}
               variant="outline"
               size="lg"
-              className="border-white/30 text-white hover:bg-white/10 px-8 py-3 text-lg font-medium backdrop-blur-sm"
+              className="glass border-white/40 text-white hover:bg-white/20 px-8 py-4 text-lg font-semibold rounded-xl hover-lift backdrop-blur-xl"
             >
               Contact Me
               <Download className="ml-2 h-5 w-5" />
@@ -73,11 +84,11 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating Elements */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white/60 animate-float">
-        <div className="flex flex-col items-center">
-          <span className="text-sm mb-2">Scroll to explore</span>
-          <div className="w-0.5 h-8 bg-white/30"></div>
+      {/* Enhanced Floating Elements */}
+      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-white/70 animate-float">
+        <div className="flex flex-col items-center glass rounded-full p-4 backdrop-blur-xl">
+          <span className="text-sm mb-2 font-medium">Scroll to explore</span>
+          <div className="w-1 h-8 bg-gradient-to-b from-white/60 to-transparent rounded-full animate-glow-pulse"></div>
         </div>
       </div>
     </section>
