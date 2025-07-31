@@ -1,9 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import ThemeToggle from '@/components/ThemeToggle';
+import LanguageToggle from '@/components/LanguageToggle';
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,11 +19,11 @@ const Navbar = () => {
   }, []);
 
   const navItems = [
-    { name: 'About', href: '#about' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Volunteering', href: '#volunteering' },
-    { name: 'Testimonials', href: '#testimonials' },
-    { name: 'Contact', href: '#contact' },
+    { name: t('nav.about'), href: '#about' },
+    { name: t('nav.projects'), href: '#projects' },
+    { name: t('nav.volunteering'), href: '#volunteering' },
+    { name: t('nav.testimonials'), href: '#testimonials' },
+    { name: t('nav.contact'), href: '#contact' },
   ];
 
   const scrollToSection = (href: string) => {
@@ -45,31 +49,42 @@ const Navbar = () => {
             Portfolio
           </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-12">
-            {navItems.map((item) => (
-              <button
-                key={item.name}
-                onClick={() => scrollToSection(item.href)}
-                className="relative text-white/80 hover:text-white transition-all duration-300 font-semibold text-lg group"
-              >
-                {item.name}
-                <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full rounded-full"></span>
-              </button>
-            ))}
+          {/* Desktop Navigation & Controls */}
+          <div className="hidden md:flex items-center space-x-8">
+            <div className="flex items-center space-x-12">
+              {navItems.map((item) => (
+                <button
+                  key={item.name}
+                  onClick={() => scrollToSection(item.href)}
+                  className="relative text-white/80 hover:text-white transition-all duration-300 font-semibold text-lg group"
+                >
+                  {item.name}
+                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full rounded-full"></span>
+                </button>
+              ))}
+            </div>
+            
+            <div className="flex items-center space-x-2">
+              <ThemeToggle />
+              <LanguageToggle />
+            </div>
           </div>
 
-          {/* Mobile Menu Button */}
-          <button
-            className="md:hidden p-3 glass rounded-xl backdrop-blur-xl hover-lift"
-            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          >
-            {isMobileMenuOpen ? (
-              <X className="h-6 w-6 text-white" />
-            ) : (
-              <Menu className="h-6 w-6 text-white" />
-            )}
-          </button>
+          {/* Mobile Menu Button & Controls */}
+          <div className="md:hidden flex items-center space-x-2">
+            <ThemeToggle />
+            <LanguageToggle />
+            <button
+              className="p-3 glass rounded-xl backdrop-blur-xl hover-lift"
+              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            >
+              {isMobileMenuOpen ? (
+                <X className="h-6 w-6 text-white" />
+              ) : (
+                <Menu className="h-6 w-6 text-white" />
+              )}
+            </button>
+          </div>
         </div>
 
         {/* Mobile Menu */}
