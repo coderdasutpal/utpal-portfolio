@@ -56,7 +56,7 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="relative text-white/80 hover:text-white transition-all duration-300 font-semibold text-lg group"
+                  className="relative text-foreground/80 hover:text-foreground transition-all duration-300 font-semibold text-lg group"
                 >
                   {item.name}
                   <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full rounded-full"></span>
@@ -95,7 +95,7 @@ const Navbar = () => {
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-3 rounded-xl text-white/80 hover:text-white hover:bg-white/10 transition-all duration-300 font-semibold text-lg hover-lift"
+                  className="block w-full text-left px-4 py-3 rounded-xl text-foreground/80 hover:text-foreground hover:bg-accent/10 transition-all duration-300 font-semibold text-lg hover-lift"
                 >
                   {item.name}
                 </button>
