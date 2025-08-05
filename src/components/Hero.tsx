@@ -21,9 +21,9 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-white">
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
       {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-white via-primary/5 to-accent/5"></div>
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-background via-primary/5 to-accent/5"></div>
       
       {/* Floating orbs */}
       <div className="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-float"></div>
