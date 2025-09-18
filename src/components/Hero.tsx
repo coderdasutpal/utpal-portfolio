@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
+import profileImage from '@/assets/profile-image-new.jpg';
 
 const Hero = () => {
   const { t } = useTranslation();
@@ -21,67 +22,59 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-background">
-      {/* Subtle Background Pattern */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-background via-primary/5 to-accent/5"></div>
-      
-      {/* Floating orbs */}
-      <div className="absolute top-20 left-20 w-32 h-32 bg-primary/10 rounded-full blur-xl animate-float"></div>
-      <div className="absolute bottom-20 right-20 w-24 h-24 bg-accent/10 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
-      <div className="absolute top-1/2 right-32 w-16 h-16 bg-tertiary/10 rounded-full blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
-
+    <section className="min-h-screen flex items-center justify-center relative overflow-hidden bg-gradient-to-br from-primary via-primary/90 to-primary/80">
       {/* Content */}
-      <div className="container-custom z-10 text-center text-foreground relative">
-        <div className="max-w-5xl mx-auto">
-          <div className="mb-8 animate-scale-in">
-            <h1 className="text-6xl md:text-8xl font-black mb-6 leading-tight text-foreground">
+      <div className="container mx-auto px-6 z-10 relative">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+          {/* Left Content */}
+          <div className="text-left text-white">
+            <h1 className="text-4xl md:text-6xl font-bold mb-8 leading-tight">
               {t('hero.greeting')}
-              <span className="block text-gradient animate-gradient-shift text-transparent bg-clip-text bg-gradient-to-r from-primary via-accent to-tertiary bg-size-200">
+              <br />
+              <span className="block">
                 {t('hero.name')}
               </span>
             </h1>
-          </div>
-          
-          <div className="glass-light backdrop-blur-xl rounded-3xl p-8 md:p-12 mb-12 animate-fade-in-scale border border-primary/20">
-            <p className="text-2xl md:text-3xl mb-6 text-foreground/90 max-w-3xl mx-auto leading-relaxed font-semibold">
+            
+            <p className="text-xl md:text-2xl mb-8 text-white/90 leading-relaxed font-light max-w-xl">
               {t('hero.tagline')}
             </p>
             
-            <p className="text-lg md:text-xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
+            <p className="text-lg text-white/80 mb-12 leading-relaxed max-w-xl">
               {t('hero.description')}
             </p>
-          </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center animate-fade-in">
-            <Button
-              onClick={scrollToProjects}
-              size="lg"
-              className="btn-primary group relative overflow-hidden"
-            >
-              <span className="relative z-10 flex items-center">
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button
+                onClick={scrollToProjects}
+                size="lg"
+                variant="outline"
+                className="bg-transparent border-white/30 text-white hover:bg-white/10 px-8 py-4 text-lg font-medium rounded-full transition-all duration-300"
+              >
                 {t('hero.seeWork')}
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </span>
-            </Button>
-            
-            <Button
-              onClick={scrollToContact}
-              variant="outline"
-              size="lg"
-              className="glass-light border-primary/30 text-primary hover:bg-primary/10 px-8 py-4 text-lg font-semibold rounded-xl hover-lift backdrop-blur-xl"
-            >
-              {t('hero.contactMe')}
-              <Download className="ml-2 h-5 w-5" />
-            </Button>
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </Button>
+              
+              <Button
+                onClick={scrollToContact}
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-white px-8 py-4 text-lg font-medium rounded-full transition-all duration-300"
+              >
+                {t('hero.contactMe')}
+              </Button>
+            </div>
           </div>
-        </div>
-      </div>
-
-      {/* Enhanced Floating Elements */}
-      <div className="absolute bottom-12 left-1/2 transform -translate-x-1/2 text-muted-foreground animate-float">
-        <div className="flex flex-col items-center glass-light rounded-full p-4 backdrop-blur-xl border border-primary/20">
-          <span className="text-sm mb-2 font-medium">{t('hero.scrollExplore')}</span>
-          <div className="w-1 h-8 bg-gradient-to-b from-primary/60 to-transparent rounded-full animate-glow-pulse"></div>
+          
+          {/* Right Content - Profile Image */}
+          <div className="flex justify-center md:justify-end">
+            <div className="relative">
+              <img 
+                src={profileImage} 
+                alt="Profile" 
+                className="w-80 h-80 md:w-96 md:h-96 object-cover rounded-2xl shadow-2xl"
+              />
+            </div>
+          </div>
         </div>
       </div>
     </section>

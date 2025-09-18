@@ -16,11 +16,11 @@
     --popover: 0 0% 100%;
     --popover-foreground: 210 40% 8%;
 
-    /* Bright primary - sky blue */
-    --primary: 199 89% 48%;
+    /* Simon Sinek inspired - bright blue */
+    --primary: 200 100% 40%;
     --primary-foreground: 0 0% 100%;
-    --primary-hover: 199 89% 42%;
-    --primary-glow: 199 89% 65%;
+    --primary-hover: 200 100% 35%;
+    --primary-glow: 200 100% 55%;
 
     /* Clean secondary */
     --secondary: 210 40% 98%;
@@ -30,16 +30,16 @@
     --muted: 210 40% 96%;
     --muted-foreground: 210 15% 40%;
 
-    /* Bright accent - electric blue */
-    --accent: 217 100% 60%;
+    /* Simon Sinek inspired - bright orange */
+    --accent: 25 95% 53%;
     --accent-foreground: 0 0% 100%;
-    --accent-hover: 217 100% 55%;
-    --accent-glow: 217 100% 75%;
+    --accent-hover: 25 95% 48%;
+    --accent-glow: 25 95% 65%;
 
-    /* Light tertiary - ice blue */
-    --tertiary: 194 100% 75%;
-    --tertiary-foreground: 210 40% 8%;
-    --tertiary-glow: 194 100% 85%;
+    /* Light tertiary - lighter blue */
+    --tertiary: 200 100% 30%;
+    --tertiary-foreground: 0 0% 100%;
+    --tertiary-glow: 200 100% 45%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
@@ -73,40 +73,40 @@
   }
 
   .dark {
-    /* Ultra-dark theme with neon accents */
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Dark theme with Simon Sinek colors */
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
 
-    --card: 240 10% 6%;
-    --card-foreground: 0 0% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 240 10% 6%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
 
-    /* Neon primary - electric blue */
-    --primary: 217 91% 65%;
-    --primary-foreground: 240 10% 3.9%;
-    --primary-hover: 217 91% 70%;
-    --primary-glow: 217 91% 75%;
+    /* Dark primary - bright blue */
+    --primary: 200 100% 55%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --primary-hover: 200 100% 60%;
+    --primary-glow: 200 100% 70%;
 
     /* Dark secondary */
-    --secondary: 240 3.7% 15.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
 
     /* Dark muted */
-    --muted: 240 3.7% 15.9%;
-    --muted-foreground: 240 5% 64.9%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
 
-    /* Neon accent - electric purple */
-    --accent: 262 100% 75%;
-    --accent-foreground: 240 10% 3.9%;
-    --accent-hover: 262 100% 80%;
-    --accent-glow: 262 100% 85%;
+    /* Dark accent - bright orange */
+    --accent: 25 95% 60%;
+    --accent-foreground: 222.2 84% 4.9%;
+    --accent-hover: 25 95% 65%;
+    --accent-glow: 25 95% 75%;
 
-    /* Neon tertiary - coral */
-    --tertiary: 14 100% 70%;
-    --tertiary-foreground: 240 10% 3.9%;
-    --tertiary-glow: 14 100% 80%;
+    /* Dark tertiary - darker blue */
+    --tertiary: 200 100% 45%;
+    --tertiary-foreground: 222.2 84% 4.9%;
+    --tertiary-glow: 200 100% 60%;
 
     --destructive: 0 85% 65%;
     --destructive-foreground: 0 0% 98%;

@@ -35,67 +35,54 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-        isScrolled
-          ? 'glass-dark backdrop-blur-2xl border-b border-white/10 shadow-premium'
-          : 'bg-transparent'
-      }`}
-    >
-      <div className="container-custom">
-        <div className="flex items-center justify-between h-20">
+    <nav className="bg-accent shadow-sm">
+      <div className="container mx-auto px-6">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <div className="font-black text-2xl text-gradient bg-gradient-to-r from-primary via-accent to-tertiary bg-clip-text">
+          <div className="text-xl font-bold text-white">
             Portfolio
           </div>
 
-          {/* Desktop Navigation & Controls */}
+          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            <div className="flex items-center space-x-12">
-              {navItems.map((item) => (
-                <button
-                  key={item.name}
-                  onClick={() => scrollToSection(item.href)}
-                  className="relative text-foreground/80 hover:text-foreground transition-all duration-300 font-semibold text-lg group"
-                >
-                  {item.name}
-                  <span className="absolute -bottom-2 left-0 w-0 h-0.5 bg-gradient-to-r from-primary to-accent transition-all duration-300 group-hover:w-full rounded-full"></span>
-                </button>
-              ))}
-            </div>
+            {navItems.map((item) => (
+              <button
+                key={item.name}
+                onClick={() => scrollToSection(item.href)}
+                className="text-white/90 hover:text-white transition-colors duration-200 font-medium"
+              >
+                {item.name}
+              </button>
+            ))}
             
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-2 ml-4">
               <ThemeToggle />
               <LanguageToggle />
             </div>
           </div>
 
-          {/* Mobile Menu Button & Controls */}
+          {/* Mobile menu button */}
           <div className="md:hidden flex items-center space-x-2">
             <ThemeToggle />
             <LanguageToggle />
             <button
-              className="p-3 glass rounded-xl backdrop-blur-xl hover-lift"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              className="p-2 text-white/90 hover:text-white"
             >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6 text-white" />
-              ) : (
-                <Menu className="h-6 w-6 text-white" />
-              )}
+              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden glass-dark rounded-2xl m-4 backdrop-blur-2xl animate-fade-in-scale">
-            <div className="p-6 space-y-4">
+          <div className="md:hidden bg-accent/95 backdrop-blur-lg border-t border-white/10 mt-2 rounded-lg">
+            <div className="px-4 py-6 space-y-4">
               {navItems.map((item) => (
                 <button
                   key={item.name}
                   onClick={() => scrollToSection(item.href)}
-                  className="block w-full text-left px-4 py-3 rounded-xl text-foreground/80 hover:text-foreground hover:bg-accent/10 transition-all duration-300 font-semibold text-lg hover-lift"
+                  className="block w-full text-left text-white/90 hover:text-white transition-colors duration-200 py-2 font-medium"
                 >
                   {item.name}
                 </button>
